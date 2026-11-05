@@ -5,14 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Batteries | Recyclables</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        const RECYCLE_STEPS = {
+            title: "Recycle By Cleaning & Sorting",
+            intro: "Use the buttons on the right to see how you can clean and sort your item",
+            steps: [
+                {
+                    title: "Tape The Ends",
+                    image: "images/batteries/step1.jpg",
+                    alt: "Used Batteries",
+                    reason: "Batteries after use can still cause sparks and fires on accident if their ends touch. To prevent any risk of fires:<br><br><b>Tape each end of each battery with a piece of clear packing, electrical or duct tape. <br><br>Avoid using masking tape, painters tape or Scotch tape</b> as they can fall off.",
+                    recyclable: false,
+                    nextLabel: "Tape Ends"
+                },
+                {
+                    title: "Store In A Plastic Bag",
+                    image: "images/batteries/step2.jpg",
+                    alt: "Batteries With Ends Taped",
+                    reason: "<b>Store the taped batteries in a dry plastic bag or glass container.</b> You can use this to stockpile used batteries for months and dispose all in one trip.<br><br><b>Make sure each battery is taped! You do not want to risk a fire.</b>",
+                    recyclable: false,
+                    nextLabel: "Store Batteries In A Bag"
+                },
+                {
+                    title: "Keep In A Cool Dry Place",
+                    image: "images/batteries/step3.jpg",
+                    alt: "Batteries In A Bag On A Shelf At Home",
+                    reason: "Batteries can still catch fire and explode if exposed to heat. <b>Keep your pile in a cool, dry and shaded place such as a shelf. <br><br>Make sure this is kept away from other electrical appliances.</b>",
+                    recyclable: false,
+                    nextLabel: "Keep On A Shelf"
+                },
+                {
+                    title: "Find A Battery Collection Bin / Site",
+                    image: "images/batteries/step4.jpg",
+                    alt: "Dispose In A Battery Collection Bin",
+                    reason: "Once your pile is full enough to make a trip, <b>find your local drop-off location to dispose of your batteries. <br><br>You can check Section 3 - Drop-Off Locations below for this.</b><br><br>You do not need to make this trip often.",
+                    recyclable: true
+                    // Last step, no next button
+                }
+            ]
+        };
+    </script>
+
     <script src="js/header.js" defer></script>
+    <script src="js/steps.js" defer></script>
+
 </head>
 <body data-page="batteries">
     
     <div id="site-header"></div>
 
     <main>
-        <!--Item content here-->
+
+        <!--Section 1 - Step-By-Step Processing-->
+        <section id="steps-mount"></section>
     </main>
 
 </body>

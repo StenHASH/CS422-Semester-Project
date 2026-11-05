@@ -13,6 +13,24 @@
     --tab-height:       36px;
     --tab-active-extra: 14px;
     --tab-radius:       10px;
+
+    /* Step-by-step slides */
+    --badge-bg:         #1A73E8;
+    --badge-border:     #0000FF;
+    --badge-text:       #FFFFFF;
+
+    --btn-next-bg:      #00C800;
+    --btn-next-border:  #008000;
+    --btn-prev-bg:      #999999;
+    --btn-prev-border:  #666666;
+    --btn-text:         #ffffff;
+
+    --state-no-bg:      #ff9999;
+    --state-no-border:  #ff6666;
+    --state-yes-bg:     #00c800;
+    --state-yes-border: #008000;
+
+    --box-border:       #aaaaaa;
 }
 
 * { box-sizing: border-box; }
@@ -137,7 +155,140 @@ body {
     z-index: 1;
 }
 
-/* Page content (placeholder)*/
 main {
     padding: 24px
+}
+
+#steps-mount {
+    font-size: clamp(12px, 1.4vw, 32px);
+}
+
+.steps-title {
+    margin: 0 0 0.25em;
+    font-size: 1.1em;
+}
+
+.steps-intro {
+    margin: 0 0 1em;
+}
+
+/* Three columns: image | step info | controls */
+.steps-grid {
+    display: grid;
+    /* Proportional columns*/
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr) minmax(0, 1fr);
+    gap: clamp(12px, 3vw, 28px);
+    align-items: start;
+}
+
+/* Lets grid children shrink instead of overflowing their column */
+.steps-grid > * {
+    min-width: 0;
+}
+
+.steps-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+}
+
+/* Middle column */
+.step-badge {
+    display: inline-block;
+    padding: 0.6em 0.9em;
+    font-weight: bold;
+    color: var(--badge-text);
+    background: var(--badge-bg);
+    border: 0.2em solid var(--badge-border);
+}
+
+.reason-label {
+    margin: 0.9em 0 0.4em;
+    font-size: 1em;
+}
+
+.reason-box {
+    min-height: 12em;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid var(--box-border);
+    font-size: 0.9em;
+    line-height:1.35;
+}
+
+/* Right column */
+.steps-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.state-box {
+    padding: 0.6em 1em;
+    font-weight: bold;
+    font-size: 1.05em;
+    color: var(--btn-text);
+    border: 0.2em solid;
+}
+
+.state-box.is-no  { 
+    background: var(--state-no-bg);  
+    border-color: var(--state-no-border); 
+}
+
+.state-box.is-yes { 
+    background: var(--state-yes-bg); 
+    border-color: var(--state-yes-border); 
+}
+
+.state-icon { margin-right: 0.4em; }
+
+.step-btn {
+    min-width: 10.5em;
+    padding: 0.6em 1em;
+    font: inherit;
+    font-weight: bold;
+    font-size: 1em;
+    color: var(--btn-text);
+    border: 0.25em solid;
+    border-radius: 0.6em;
+    cursor: pointer;
+}
+
+.step-btn-next { 
+    background: var(--btn-next-bg); 
+    border-color: var(--btn-next-border); 
+    margin-top: 2.5em; 
+}
+
+.step-btn-prev { 
+    background: var(--btn-prev-bg); 
+    border-color: var(--btn-prev-border); 
+}
+
+.step-btn:hover { filter: brightness(1.08); }
+
+.step-btn.is-hidden { visibility: hidden; }
+
+/* Narrow screens: stack everything */
+@media (max-width: 700px) {
+    #steps-mount {
+        font-size: clamp(14px, 4vw, 20px);
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps-image img {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .step-btn-next { margin-top: 0; }
 }

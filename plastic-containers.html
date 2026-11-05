@@ -5,14 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Plastic Containers | Recyclables</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        const RECYCLE_STEPS = {
+            title: "Recycle By Cleaning & Sorting",
+            intro: "Use the buttons on the right to see how you can clean and sort your item",
+            steps: [
+                {
+                    title: "Remove Items",
+                    image: "images/plastic-containers/step1.jpg",
+                    alt: "Dirty plastic container with a fork and spoon inside",
+                    reason: "Separate objects may be made of different materials or may not be recyclable. <b>Remove all objects from the container and handle them separately.</b> This includes labels!",
+                    recyclable: false,
+                    nextLabel: "Remove Separate Objects"
+                },
+                {
+                    title: "Rinse Container",
+                    image: "images/plastic-containers/step2.jpg",
+                    alt: "Dirty plastic container with food residue",
+                    reason: "Food residue will cause bacteria buildup, foul stench, and can attract pests. Leftover liquids can leak &amp; stain other items before they can be recycled! <b>Rinse off any food residue first!</b> You do not need to use any soap.",
+                    recyclable: false,
+                    nextLabel: "Rinse &amp; Dry"
+                },
+                {
+                    title: "Check Plastic Type",
+                    image: "images/plastic-containers/step3.jpg",
+                    alt: "Clean plastic container with recycling symbols (plastic type)",
+                    reason: "<b>Check the plastic type.</b> This is usually indicated by a number on a triangle or recycling symbol on the plastic.<br><br><b>If it is 1, 2, or 5, then it is recyclable.</b><br><br><b>3, 4 and 6 depend on your location.</b> Make a quick search on the internet to confirm. If you cannot confirm, throw it in the general trash.",
+                    recyclable: false,
+                    nextLabel: "Check Plastic Type"
+                },
+                {
+                    title: "Ready To Recycle",
+                    image: "images/plastic-containers/step4.jpg",
+                    alt: "Clean plastic container",
+                    reason: "Once you let it dry and confirm it is a recyclable plastic type in your area, <b>you are ready to recycle!</b><br><br>Throw it in the recycling bin!",
+                    recyclable: true
+                    // Last step, no next button
+                }
+            ]
+        };
+    </script>
+
     <script src="js/header.js" defer></script>
+    <script src="js/steps.js" defer></script>
+
 </head>
 <body data-page="plastic-containers">
     
     <div id="site-header"></div>
 
     <main>
-        <!--Item content here-->
+
+        <!--Section 1 - Step-By-Step Processing-->
+        <section id="steps-mount"></section>
     </main>
 
 </body>
