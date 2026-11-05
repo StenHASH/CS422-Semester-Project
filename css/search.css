@@ -1,0 +1,31 @@
+/* Search page styles. All classes are prefixed "ms-" so they can't clash with style.css. */
+.ms-main { max-width: 760px; margin: 0 auto; padding: 24px 16px 48px; }
+.ms-title { margin: 0 0 4px; font-size: 1.75rem; }
+.ms-sub { margin: 0 0 20px; color: #555; }
+ 
+.ms-label { position: absolute; left: -9999px; }
+.ms-row { display: flex; gap: 8px; }
+.ms-input { flex: 1; min-width: 0; padding: 12px 14px; font-size: 1rem; border: 2px solid #888; border-radius: 8px; }
+.ms-input:focus { outline: 3px solid #2e7d32; outline-offset: 1px; border-color: #2e7d32; }
+.ms-button { padding: 12px 22px; font-size: 1rem; font-weight: 600; color: #fff; background: #2e7d32; border: 0; border-radius: 8px; cursor: pointer; }
+.ms-button:hover { background: #1b5e20; }
+.ms-button:focus-visible { outline: 3px solid #1b5e20; outline-offset: 2px; }
+ 
+.ms-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 8px; }
+.ms-chip { padding: 8px 14px; font-size: .95rem; background: #fff; color: #222; border: 1.5px solid #888; border-radius: 999px; cursor: pointer; }
+.ms-chip:hover { background: #f1f1f1; }
+.ms-chip[aria-pressed="true"] { background: #2e7d32; border-color: #2e7d32; color: #fff; }
+.ms-chip:focus-visible { outline: 3px solid #1b5e20; outline-offset: 2px; }
+ 
+.ms-count { margin: 12px 0; color: #444; }
+.ms-results { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.ms-card { display: block; padding: 14px 16px; color: inherit; text-decoration: none; background: #fff; border: 1.5px solid #ccc; border-radius: 10px; }
+.ms-card:hover, .ms-card:focus-visible { border-color: #2e7d32; box-shadow: 0 0 0 2px #2e7d3233; outline: none; }
+.ms-card-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.ms-card-name { font-size: 1.1rem; font-weight: 700; }
+.ms-card-tag { font-size: .8rem; color: #2e7d32; font-weight: 600; white-space: nowrap; }
+.ms-card-desc { margin: 4px 0 0; color: #555; font-size: .92rem; }
+ 
+.ms-empty { padding: 16px; background: #fff8e1; border: 1.5px solid #f0c36d; border-radius: 10px; }
+@media (max-width: 480px) { .ms-row { flex-direction: column; } }
+ 
