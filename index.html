@@ -3,17 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Recylables</title>
-
+    <title>Search | Recyclables</title>
+ 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/search.css">
     <script src="js/header.js" defer></script>
+    <script src="js/search.js" defer></script>
 </head>
-<body>
-    
-    <div id = "site-header"></div>
-
-    <main>
-        <!-- Metadata search goes here-->
+<body data-page="search">
+ 
+    <div id="site-header"></div>
+ 
+    <main class="ms-main">
+        <h1 class="ms-title">What are you recycling?</h1>
+        <p class="ms-sub">Type an item, like "pizza box" or "AA battery", or pick a material.</p>
+ 
+        <form class="ms-form" id="ms-form" role="search" autocomplete="off">
+            <label class="ms-label" for="ms-input">Search for an item</label>
+            <div class="ms-row">
+                <input id="ms-input" class="ms-input" type="search" name="q"
+                       placeholder="Search items, e.g. water bottle" aria-describedby="ms-count">
+                <button class="ms-button" type="submit">Search</button>
+            </div>
+        </form>
+ 
+        <div class="ms-chips" id="ms-chips" role="group" aria-label="Filter by material"></div>
+ 
+        <p class="ms-count" id="ms-count" aria-live="polite"></p>
+        <ul class="ms-results" id="ms-results"></ul>
     </main>
 </body>
 </html>
+ 
