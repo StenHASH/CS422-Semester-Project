@@ -1,0 +1,294 @@
+/* Sections 2 and 3 - Recyclables */
+
+.extra-section {
+    margin: 42px 0 14px;
+    padding: 26px;
+    background: #f5f7f5;
+    border: 1px solid #d9e5d6;
+    border-radius: 14px;
+    scroll-margin-top: 18px;
+}
+
+.extra-heading {
+    max-width: 900px;
+    margin-bottom: 22px;
+}
+
+.extra-eyebrow {
+    color: #326c25;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+
+.extra-heading h2 {
+    font-size: clamp(1.4rem, 2.1vw, 2rem);
+    margin: 8px 0;
+}
+
+.extra-heading p {
+    margin: 0;
+    color: #405040;
+    line-height: 1.55;
+    font-size: 1rem;
+}
+
+/* Instruction and location cards */
+
+.extra-steps,
+.extra-location-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.extra-step-card,
+.extra-location-card {
+    padding: 22px;
+    background: white;
+    border: 1px solid #d8ddd8;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(27, 60, 27, 0.04);
+}
+
+.extra-number {
+    display: inline-flex;
+    width: 38px;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #dff3da;
+    color: #1e6c20;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.extra-step-card h3,
+.extra-location-card h3 {
+    margin: 14px 0 8px;
+    font-size: 1.12rem;
+}
+
+.extra-step-card p,
+.extra-location-card p {
+    margin: 0;
+    line-height: 1.55;
+    color: #334033;
+    font-size: 0.96rem;
+}
+
+.extra-note {
+    padding: 15px 18px;
+    margin: 20px 0 0;
+    border-left: 4px solid #4e9b35;
+    background: #eaf5e7;
+    border-radius: 0 8px 8px 0;
+    color: #263e25;
+    line-height: 1.5;
+}
+
+.extra-source {
+    font-size: 0.85rem;
+    margin: 14px 0 0;
+    color: #576457;
+}
+
+.extra-source a,
+.extra-text-link,
+.extra-small a {
+    color: #165f28;
+    text-underline-offset: 3px;
+}
+
+/* Shortcut displayed when rinsing is needed */
+
+.extra-shortcut {
+    display: block;
+    width: 100%;
+    margin-top: -0.5em;
+    padding: 11px 12px;
+    background: white;
+    color: #21652b;
+    border: 2px solid #579c42;
+    border-radius: 9px;
+    text-align: center;
+    font: inherit;
+    font-size: 0.82em;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.extra-shortcut:hover,
+.extra-shortcut:focus-visible {
+    background: #eaf5e7;
+}
+
+.extra-shortcut[hidden] {
+    display: none;
+}
+
+/* Battery type selector */
+
+.battery-type-panel {
+    margin-bottom: 20px;
+    padding: 18px 20px;
+    background: #e9f3e6;
+    border: 1px solid #cde3c6;
+    border-radius: 10px;
+    max-width: 900px;
+}
+
+.battery-type-panel label {
+    display: block;
+    margin-bottom: 9px;
+}
+
+.battery-type-panel select {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 7px;
+    padding: 10px 12px;
+    font: inherit;
+    border: 1px solid #789a72;
+    background: white;
+}
+
+.battery-type-advice {
+    margin: 12px 0 0;
+    color: #254d2b;
+    line-height: 1.5;
+}
+
+/* Battery disposal locations */
+
+.extra-location-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.extra-location-category {
+    display: inline-block;
+    background: #edf6e9;
+    color: #286b27;
+    font-size: 0.74rem;
+    padding: 5px 9px;
+    border-radius: 100px;
+    font-weight: 800;
+    letter-spacing: 0.035em;
+}
+
+.extra-location-card h3 {
+    font-size: 1.22rem;
+    line-height: 1.3;
+}
+
+.extra-address {
+    margin: 0 0 16px !important;
+    color: #55615a !important;
+}
+
+.extra-meta {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 12px;
+    margin: 12px 0;
+    font-size: 0.94rem;
+    line-height: 1.5;
+}
+
+.extra-meta > strong {
+    color: #24532b;
+}
+
+.extra-small {
+    padding-top: 10px;
+    font-size: 0.85rem !important;
+}
+
+.extra-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.extra-action {
+    padding: 10px 13px;
+    border-radius: 8px;
+    background: #28852a;
+    color: white;
+    font-weight: 700;
+    font-size: 0.88rem;
+    text-decoration: none;
+}
+
+.extra-action:hover {
+    background: #1e6b20;
+}
+
+.extra-text-link {
+    font-weight: 650;
+    font-size: 0.88rem;
+}
+
+.extra-location-card[hidden] {
+    display: none;
+}
+
+/* Mobile responsiveness */
+
+@media (max-width: 800px) {
+    .extra-steps,
+    .extra-location-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .extra-section {
+        padding: 20px 15px;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 440px) {
+    .extra-meta {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+
+/* Additional drop-off location search */
+
+.extra-more-locations {
+    margin-top: 20px;
+    padding: 22px;
+    text-align: center;
+    background: #e9f3e6;
+    border: 1px solid #cde3c6;
+    border-radius: 12px;
+}
+
+.extra-more-locations h3 {
+    margin: 0 0 8px;
+    color: #24532b;
+    font-size: 1.2rem;
+}
+
+.extra-more-locations p {
+    margin: 0 0 22px;
+    line-height: 1.5;
+}
+
+.extra-more-locations .extra-action {
+    display: inline-block;
+}
+
+/*Keyboard accessibility*/
+.extra-action:focus-visible,
+.extra-text-link:focus-visible,
+.extra-shortcut:focus-visible,
+.battery-type-panel select:focus-visible {
+    outline: 3px solid #245bdf;
+    outline-offset: 3px;
+}
