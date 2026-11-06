@@ -26,13 +26,13 @@ function renderHeader() {
 
     mount.innerHTML = `
     <header class="site-header">
-      <div class="header-text">
-        <a class="site-title" href="index.html">Recyclables</a>
-        <p class="site-subtitle">How You Can Reduce, Reuse &amp; Recycle</p>
-      </div>
-      <button class="menu-button" type="button" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">&#9851;</span>
+        <span class="brand-text">
+          <span class="site-title">Recyclables</span>
+          <span class="site-subtitle">How You Can Reduce, Reuse &amp; Recycle</span>
+        </span>
+      </a>
     </header>
 
     <nav class="catalog" aria-label="Recycling items">
