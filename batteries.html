@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Batteries | Recyclables</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/extra-sections.css">
 
     <script>
         const RECYCLE_STEPS = {
@@ -49,16 +51,297 @@
 
     <script src="js/header.js" defer></script>
     <script src="js/steps.js" defer></script>
+    <script src="js/battery-dropoff.js" defer></script>
 
 </head>
 <body data-page="batteries">
-    
+
     <div id="site-header"></div>
 
     <main>
 
         <!--Section 1 - Step-By-Step Processing-->
         <section id="steps-mount"></section>
+
+        <!--Section 3 - Battery Drop-Off Locations-->
+        <section id="battery-dropoff"
+                 class="extra-section"
+                 aria-labelledby="battery-dropoff-title">
+
+            <div class="extra-heading">
+                <span class="extra-eyebrow">
+                    SECTION 3 - SPECIAL DISPOSAL
+                </span>
+
+                <h2 id="battery-dropoff-title">
+                    Where to Drop Off Batteries
+                </h2>
+
+                <p>
+                    Rechargeable and lithium batteries do not belong
+                    in regular trash or curbside recycling.
+
+                    Check your battery type, then choose a suitable
+                    drop-off location.
+                </p>
+            </div>
+
+            <!--Battery type selection-->
+            <div class="battery-type-panel">
+
+                <label for="battery-type">
+                    <strong>What type of battery do you have?</strong>
+                </label>
+
+                <select id="battery-type"
+                        aria-describedby="battery-type-advice">
+
+                    <option value="rechargeable">
+                        Rechargeable AA / AAA (NiMH, NiCd)
+                    </option>
+
+                    <option value="lithium">
+                        Lithium-ion / Rechargeable Power Bank
+                    </option>
+
+                    <option value="alkaline">
+                        Single-Use Alkaline AA / AAA
+                    </option>
+
+                    <option value="unknown">
+                        I'm Not Sure
+                    </option>
+
+                </select>
+
+                <p id="battery-type-advice"
+                   class="battery-type-advice"
+                   role="status"
+                   aria-live="polite">
+
+                    Select a battery type to see disposal guidance.
+
+                </p>
+            </div>
+
+            <!--Available locations-->
+            <div class="extra-location-grid"
+                 id="battery-location-cards">
+
+                <!--Location 1 - Chicago City Facility-->
+                <article class="extra-location-card">
+
+                    <span class="extra-location-category">
+                        CITY FACILITY
+                    </span>
+
+                    <h3>
+                        Chicago Household Chemicals &amp;
+                        Computer Recycling Facility
+                    </h3>
+
+                    <p class="extra-address">
+                        1150 N. North Branch St.<br>
+                        Chicago, IL 60642
+                    </p>
+
+                    <div class="extra-meta">
+                        <strong>Hours</strong>
+
+                        <span>
+                            Tuesday: 7 AM - 12 PM<br>
+                            Thursday: 2 PM - 7 PM<br>
+                            First Saturday of each month: 8 AM - 3 PM
+                        </span>
+                    </div>
+
+                    <div class="extra-meta">
+                        <strong>Accepts</strong>
+
+                        <span>
+                            Rechargeable and lithium batteries.
+                            Alkaline batteries are not accepted.
+                        </span>
+                    </div>
+
+                    <p class="extra-small">
+                        Check current facility policies and hours
+                        before visiting. Confirm acceptance for
+                        power banks or damaged batteries.
+                    </p>
+
+                    <div class="extra-links">
+
+                        <a class="extra-action"
+                           href="https://www.google.com/maps/search/?api=1&amp;query=1150%20N%20North%20Branch%20St%20Chicago%20IL%2060642"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            View on Google Maps
+                        </a>
+
+                        <a class="extra-text-link"
+                           href="https://www.recyclebycity.com/chicago/notebook/household-chemicals-computer-recycling-facility"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Facility Information
+                        </a>
+
+                    </div>
+                </article>
+
+                <!--Location 2 - Home Depot-->
+                <article class="extra-location-card">
+
+                    <span class="extra-location-category">
+                        RETAIL COLLECTION - VERIFY FIRST
+                    </span>
+
+                    <h3>
+                        The Home Depot - North Avenue
+                    </h3>
+
+                    <p class="extra-address">
+                        1232 W. North Ave.<br>
+                        Chicago, IL 60642
+                    </p>
+
+                    <div class="extra-meta">
+                        <strong>Store Hours</strong>
+
+                        <span>
+                            Mon - Wed: 6 AM - 11 PM<br>
+                            Thu - Sat: 6 AM - 10 PM<br>
+                            Sunday: 7 AM - 8 PM<br>
+                            Phone: (773) 486-9200
+                        </span>
+                    </div>
+
+                    <div class="extra-meta">
+                        <strong>Accepts</strong>
+
+                        <span>
+                            Rechargeable batteries including:<br>
+                            • Nickel-Metal Hydride (NiMH)<br>
+                            • Nickel-Cadmium (NiCd)<br>
+                            • Lithium-ion (Li-ion)<br><br>
+
+                            Program limit: 11 lbs or less and
+                            300 watt-hours or less per battery.
+                            Free drop-off for eligible batteries.
+                        </span>
+                    </div>
+
+                    <p class="extra-small">
+                        Home Depot partners with Call2Recycle for
+                        rechargeable battery collection.
+                        Call (773) 486-9200 to confirm the
+                        North Avenue store's collection bin is
+                        available and accepts your battery type.
+                        Store hours and collection availability
+                        may change.
+                    </p>
+
+                    <p class="extra-small">
+                        Battery collection bins are typically near the entrance
+                        or Customer Service Desk. These are store hours, not
+                        separately confirmed drop-off hours. Call before visiting.
+                    </p>
+
+                    <div class="extra-links">
+
+                        <a class="extra-text-link"
+                           href="https://www.homedepot.com/l/North-Avenue/IL/Chicago/60642/1912"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Store Information
+                        </a>
+
+                        <a class="extra-text-link"
+                           href="https://www.google.com/maps/search/?api=1&amp;query=1232%20W%20North%20Ave%20Chicago%20IL%2060642"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Google Maps
+                        </a>
+
+                    </div>
+                </article>
+
+            </div>
+
+            <!--Find additional battery collection locations-->
+            <div class="extra-more-locations">
+
+                <h3>Need a location closer to you?</h3>
+
+                <p>
+                    Find additional battery collection sites near you.
+                    Check which battery types are accepted before visiting.
+                </p>
+
+                <a class="extra-action"
+                   href="https://locations.call2recycle.org/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Find More Battery Drop-Off Locations
+                </a>
+
+            </div>
+
+            <!--Safety reminder-->
+            <div class="extra-note" role="note">
+
+                <strong>Before you go:</strong>
+
+                Follow the collection program's instructions
+                for protecting battery terminals against
+                short circuits.
+
+                Never place swollen, leaking, overheated,
+                or damaged batteries in a standard
+                collection box. Ask the facility about
+                special handling.
+
+            </div>
+
+            <!--Sources-->
+            <p class="extra-source">
+
+                Sources:
+
+                <a href="https://www.recyclebycity.com/chicago/notebook/household-chemicals-computer-recycling-facility"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Chicago Facility Guidance
+                </a>
+
+                |
+
+                <a href="https://www.homedepot.com/c/ab/how-to-dispose-of-batteries/9ba683603be9fa5395fab90124a115f1"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Home Depot Battery Program
+                </a>
+
+                |
+
+                <a href="https://locations.call2recycle.org/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Call2Recycle Locator
+                </a>
+
+                |
+
+                <a href="https://epa.illinois.gov/topics/waste-management/waste-disposal/household-hazardous-waste/batteries.html"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Illinois EPA Battery Guidance
+                </a>
+
+            </p>
+
+        </section>
+
     </main>
 
 </body>
