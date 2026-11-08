@@ -5,7 +5,7 @@ function initSteps() {
     const mount = document.getElementById("steps-mount");
     if (!mount || typeof RECYCLE_STEPS === "undefined") return;
 
-    const { title, intro, steps } = RECYCLE_STEPS;
+    const { title, intro, steps, source } = RECYCLE_STEPS;
     let current = 0;
 
     // Builds the layout once
@@ -33,6 +33,13 @@ function initSteps() {
             <button type="button" class="step-btn step-btn-prev">Previous Step</button>
         </div>
     </div>
+
+    ${source ? `
+      <p class="steps-source">
+        Source:
+        <a href="${source.url}" target="_blank" rel="noopener noreferrer">${source.label}</a>
+      </p>
+    ` : ""}
   `;
 
     const img       = mount.querySelector(".steps-image img");
