@@ -328,3 +328,15 @@ main {
 
     .step-btn-next { margin-top: 0; }
 }
+
+/* Source */
+.steps-source {
+    font-size: 0.85rem;
+    margin: 14px 0 0;
+    color: #576457;
+}
+
+.steps-source a {
+    color: #165f28;
+    text-underline-offset: 3px;
+}
